@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GroupFourProject</string>
+    <string name="bannerText">Group 4</string>
+    <string name="email_address">e-mail address</string>
+    <string name="password">password</string>
+    <string name="login_button_text">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+</resources>
