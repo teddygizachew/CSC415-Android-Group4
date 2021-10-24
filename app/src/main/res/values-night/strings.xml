@@ -5,4 +5,6 @@
     <string name="password">password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="create_account">Create Account</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
 </resources>

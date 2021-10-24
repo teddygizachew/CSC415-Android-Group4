@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisteredUser" >
 
     <TextView
-        android:id="@+id/banner"
+        android:id="@+id/banner_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
         android:text="@string/bannerText"
         android:textAlignment="center"
+        android:fontFamily="sans-serif"
         android:textSize="60sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
@@ -21,74 +22,73 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
-        android:id="@+id/email_input"
+        android:id="@+id/firstName_input"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_user" />
+
+    <EditText
+        android:id="@+id/lastName_input"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="text"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstName_input" />
+
+    <EditText
+        android:id="@+id/email_input_user"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/email_address"
-        android:textSize="24sp"
         android:inputType="textEmailAddress"
+        android:textSize="24sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/banner" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName_input" />
 
     <EditText
-        android:id="@+id/password_input"
+        android:id="@+id/password_input_user"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/password"
-        android:textSize="24sp"
         android:inputType="textPassword"
+        android:textSize="24sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_input" />
+        app:layout_constraintTop_toBottomOf="@+id/email_input_user" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/createAccount_button"
         android:layout_width="380dp"
         android:layout_height="75dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#00f"
-        android:text="@string/login_button_text"
+        android:text="@string/create_account"
         android:textColor="#fff"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_input" />
-
-    <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="16dp"
-        android:text="@string/forgot_password"
-        android:textColor="#00f"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button"
-         />
-
-    <TextView
-        android:id="@+id/create_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
-        android:text="@string/create_account"
-        android:textColor="#00f"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/forgot_password"
-        app:layout_constraintTop_toTopOf="@+id/forgot_password"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/password_input_user" />
 
     <ProgressBar
-        android:id="@+id/progress_bar"
+        android:id="@+id/progress_bar_user"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
