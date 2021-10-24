@@ -14,10 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        /*
-        LEFT OFF AT 5:42/21:52
-         */
+        
         setContentView(R.layout.activity_main);
 
         register = (TextView) findViewById(R.id.create_account);
