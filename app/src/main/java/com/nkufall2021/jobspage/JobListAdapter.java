@@ -6,11 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.parceler.Parcels;
+
 
 import java.util.LinkedList;
 
@@ -52,16 +54,34 @@ public class JobListAdapter extends RecyclerView.Adapter<JobListAdapter.JobViewH
         LinearLayout container;
         TextView title;
         TextView description;
+        TextView location;
+        TextView type;
+        TextView post_date;
+        TextView info;
 
         public JobViewHolder(View itemView) {
             super(itemView);
+            title = itemView.findViewById(R.id.job_title);
+            description = itemView.findViewById(R.id.job_description);
+            location = itemView.findViewById(R.id.job_location);
+            type = itemView.findViewById(R.id.job_type);
+            post_date = itemView.findViewById(R.id.job_post_date);
+            info = itemView.findViewById(R.id.job_info);
             container = itemView.findViewById(R.id.container);
         }
+
         public void bind(Job job) {
+            title.setText(job.getTitle());
+            description.setText(job.getDescription());
+            location.setText(job.getJob_location());
+            type.setText(job.getJob_type());
+            post_date.setText(job.getJob_post_date());
+//            info.setText(job.getJob_info());
             container.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, JobActivity.class);
+                    intent.putExtra("job", Parcels.wrap(job));
                     context.startActivity(intent);
                 }
             });

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JobsPage</string>
-    <string name="student_union_food_delivery">Student Union Food Delivery</string>
+    <string name="student_union_food_delivery"></string>
+    <string name="description">Description</string>
 </resources>
