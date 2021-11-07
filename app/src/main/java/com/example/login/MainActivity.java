@@ -185,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void LoginWithGoogle(View view) {
+        progressDialog.setMessage("Signing in With Google...");
+        progressDialog.show();
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -213,6 +215,10 @@ public class MainActivity extends AppCompatActivity {
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
+                progressDialog.dismiss();
+                Toast.makeText(MainActivity.this, "ERROR: " +
+                        e.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
             }
         }
     }
@@ -227,12 +233,16 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
+                            progressDialog.dismiss();
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            updateUI(null);
+                            progressDialog.dismiss();
+                            Toast.makeText(MainActivity.this, "ERROR: " +
+                                    task.getException(), Toast.LENGTH_SHORT).show();
+                            finish();
                         }
                     }
                 });
@@ -240,6 +250,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void updateUI(FirebaseUser user) {
-        
+        Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
