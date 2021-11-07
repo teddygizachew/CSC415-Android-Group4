@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="bannerText">Group 4</string>
+    <string name="email_address">e-mail address</string>
+    <string name="password">password</string>
+    <string name="password_create_account">password (must be 6 - 16 characters)</string>
+    <string name="login_button_text">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="or">Or Login With:</string>
+    <string name="confirm_password">confirm password</string>
+</resources>
