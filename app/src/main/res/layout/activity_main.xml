@@ -129,6 +129,7 @@
                 android:id="@+id/login_facebook"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
+                android:onClick="LoginWithFacebook"
                 app:layout_constraintBottom_toBottomOf="@+id/login_google"
                 app:layout_constraintEnd_toStartOf="@+id/login_github"
                 app:layout_constraintHorizontal_bias="0.5"

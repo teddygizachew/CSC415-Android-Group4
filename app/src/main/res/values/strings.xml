@@ -11,4 +11,11 @@
     <string name="last_name">last name</string>
     <string name="or">Or Login With:</string>
     <string name="confirm_password">confirm password</string>
+
+    // for Facebook - Firebase
+    <string name="facebook_app_id">444053120482967</string>
+    <string name="fb_login_protocol_scheme">fb444053120482967</string>
+
+    /////////////////////////////////// TEMPORARY //////////////////////////////////////////////
+    <string name="default_web_client_id">463515678933-t7h4t2mmgu9beqgqoilvpdn1tfn28bq5.apps.googleusercontent.com</string>
 </resources>
