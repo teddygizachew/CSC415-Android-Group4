@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etEmail, etPassword;
     private Button btnLogin;
     private ImageView btnFacebook, btnGithub, btnGoogle, btnPhone, btnTwitter;
+    private TextView btnForgotPassword;
     ProgressDialog progressDialog;
 
     // Firebase variables
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         btnGoogle = findViewById(R.id.login_google);
         btnPhone = findViewById(R.id.login_phone);
         btnTwitter = findViewById(R.id.login_twitter);
+        btnForgotPassword = findViewById(R.id.forgot_password);
         progressDialog = new ProgressDialog(this);
 
         // initialize Firebase variables
@@ -319,5 +322,26 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+
+    public void sendPasswordEmail() {
+        if(isValidEmailAddress()) {
+            String email = getTextAsString(etEmail);
+            mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        Log.d(TAG, "forgotPasswordEmailSent:success");
+                        Toast.makeText(MainActivity.this, "Email sent to: " + email,
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        Log.d(TAG, "forgotPasswordEmailSent:failure");
+                        Toast.makeText(MainActivity.this, "Oops... Email not sent. \n\nError: " +
+                                        task.getException(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 }

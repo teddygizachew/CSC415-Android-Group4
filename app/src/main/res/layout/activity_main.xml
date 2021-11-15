@@ -85,6 +85,7 @@
                 android:textColor="#00f"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:onClick="sendPasswordEmail"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
