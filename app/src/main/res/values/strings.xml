@@ -17,7 +17,7 @@
     <string name="fb_login_protocol_scheme">fb444053120482967</string>
 
     /////////////////////////////////// TEMPORARY //////////////////////////////////////////////
-
+<!--
     <string name="default_web_client_id">463515678933-t7h4t2mmgu9beqgqoilvpdn1tfn28bq5.apps.googleusercontent.com</string>
-
+-->
 </resources>

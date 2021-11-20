@@ -76,103 +76,43 @@
                 app:layout_constraintTop_toBottomOf="@+id/password_input" />
 
             <TextView
-                android:id="@+id/forgot_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="5dp"
-                android:text="@string/forgot_password"
-                android:textColor="#00f"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:onClick="sendPasswordEmail"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login_button" />
-
-            <TextView
                 android:id="@+id/create_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="110dp"
+                android:layout_marginTop="36dp"
+                android:onClick="RegisterUser"
                 android:text="@string/create_account"
                 android:textColor="#00f"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:onClick="RegisterUser"
-                app:layout_constraintLeft_toRightOf="@+id/forgot_password"
-                app:layout_constraintTop_toTopOf="@+id/forgot_password" />
+                app:layout_constraintEnd_toEndOf="@+id/login_button"
+                app:layout_constraintStart_toStartOf="@+id/login_button"
+                app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
             <TextView
                 android:id="@+id/txtOr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="52dp"
                 android:text="@string/or"
                 android:textColor="#00f"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
-
-            <ImageView
-                android:id="@+id/login_twitter"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintBottom_toBottomOf="@+id/login_google"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/login_phone"
-                app:layout_constraintTop_toTopOf="@+id/login_google"
-                app:srcCompat="@drawable/twitter_logo" />
-
-            <ImageView
-                android:id="@+id/login_facebook"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:onClick="LoginWithFacebook"
-                app:layout_constraintBottom_toBottomOf="@+id/login_google"
-                app:layout_constraintEnd_toStartOf="@+id/login_github"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/login_google"
-                app:srcCompat="@drawable/facebook_logo" />
-
-            <ImageView
-                android:id="@+id/login_github"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintBottom_toBottomOf="@+id/login_google"
-                app:layout_constraintEnd_toStartOf="@+id/login_google"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/login_facebook"
-                app:layout_constraintTop_toTopOf="@+id/login_google"
-                app:srcCompat="@drawable/github_logo" />
+                app:layout_constraintEnd_toEndOf="@+id/create_account"
+                app:layout_constraintStart_toStartOf="@+id/create_account"
+                app:layout_constraintTop_toBottomOf="@+id/create_account" />
 
             <ImageView
                 android:id="@+id/login_google"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="191dp"
+                android:layout_height="48dp"
                 android:onClick="LoginWithGoogle"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/login_phone"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/login_github"
+                app:layout_constraintEnd_toEndOf="@+id/txtOr"
+                app:layout_constraintStart_toStartOf="@+id/txtOr"
                 app:layout_constraintTop_toBottomOf="@+id/txtOr"
-                app:layout_constraintVertical_bias="0.25"
-                app:srcCompat="@drawable/google_logo" />
-
-            <ImageView
-                android:id="@+id/login_phone"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                app:layout_constraintBottom_toBottomOf="@+id/login_google"
-                app:layout_constraintEnd_toStartOf="@+id/login_twitter"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/login_google"
-                app:layout_constraintTop_toTopOf="@+id/login_google"
-                app:srcCompat="@drawable/phone_logo" />
+                app:layout_constraintVertical_bias="0.241"
+                app:srcCompat="@drawable/btn_google_signin_light_normal_web" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
