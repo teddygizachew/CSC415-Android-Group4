@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GroupFourProject</string>
+    <string name="completed_jobs_box">Completed jobs</string>
+    <string name="get_to_know_user">Short little blurb about user</string>
+    <string name="user_age">Age</string>
+    <string name="name_box">First Last</string>
 </resources>
