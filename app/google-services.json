@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753128722537",
+    "project_id": "campuslogin-5043e",
+    "storage_bucket": "campuslogin-5043e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753128722537:android:65968012a3e2c1f48452f8",
+        "android_client_info": {
+          "package_name": "com.example.campuslogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753128722537-aa8sjd4f4469rvbo86agcm1n66p72c84.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDppkWTsk56sogfyD1LA2cL-ZXaSUZtM-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753128722537-aa8sjd4f4469rvbo86agcm1n66p72c84.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
