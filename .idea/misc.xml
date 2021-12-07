@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Luanne/AndroidStudioProjects/CampusLogin/app/src/main/res/layout/activity_destination.xml" value="0.1" />
+        <entry key="..\:/Users/Luanne/AndroidStudioProjects/CampusLogin/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Luanne/AndroidStudioProjects/CampusLogin/app/src/main/res/layout/activity_registration.xml" value="0.12" />
+        <entry key="app/src/main/res/drawable-v24/search_layout.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/compose_icon_state_selector.xml" value="0.13125" />
+        <entry key="app/src/main/res/drawable/etshape.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/grad.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/home_icon_state_selector.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_icons8_settings.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_insta_logo.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_outline_location_on_24.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_user_background.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_user_pic.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_wave8.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/profile_icon_state_selector.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/activity_destination.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/activity_job.xml" value="0.21240942028985507" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_compose.xml" value="0.21240942028985507" />
+        <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.5862068965517241" />
+        <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.11510416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_wave8"
+    android:backgroundTint="@color/Yellow"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/textViewBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:gravity="center"
+        android:text="CampUs"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBanner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/etshape"
+        android:ems="10"
+        android:hint="@string/username"
+        android:padding="10dp"
+        android:textColorHighlight="#1DA1F2" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextUsername"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/etshape"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColorHighlight="#1DA1F2" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/etshape"
+        android:hint="@string/confirm_password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColorHighlight="#1DA1F2" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextConfirmPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#53D769"
+        android:onClick="CreateUserAccount"
+        android:text="@string/sign_up" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/buttonLogin"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/already_have_an_account" />
+
+    <TextView
+        android:id="@+id/tvSignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/buttonLogin"
+        android:layout_alignBottom="@+id/tvText"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="589dp"
+        android:layout_marginEnd="75dp"
+        android:layout_toEndOf="@+id/tvText"
+        android:text="@string/sign_in"
+        android:textColor="#147EFB" />
+
+</RelativeLayout>

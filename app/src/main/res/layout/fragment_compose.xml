@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.ComposeFragment">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/jobNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Name:" />
+
+
+            <EditText
+                android:id="@+id/jobNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobNameLabel"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobNameLabel"
+                android:ems="10"
+                android:hint="Enter job name here" />
+
+
+            <TextView
+                android:id="@+id/jobDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobNameLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="Description: " />
+
+            <EditText
+                android:id="@+id/jobDescriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobDescriptionLabel"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobDescriptionLabel"
+                android:ems="10"
+                android:hint="Enter job description" />
+
+            <TextView
+                android:id="@+id/jobPaymentLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobDescriptionLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="Payment: " />
+
+            <EditText
+                android:id="@+id/jobPaymentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobPaymentLabel"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobDescriptionLabel"
+                android:ems="10"
+                android:hint="Enter amount" />
+
+            <TextView
+                android:id="@+id/jobDueDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobPaymentLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="Due Date: " />
+
+            <EditText
+                android:id="@+id/jobDueDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobDueDateLabel"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobDescriptionLabel"
+                android:ems="10"
+                android:hint="Enter amount" />
+
+            <TextView
+                android:id="@+id/jobLocationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobDueDateLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="Location: " />
+
+            <EditText
+                android:id="@+id/jobLocationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobLocationLabel"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobDescriptionLabel"
+                android:ems="10"
+                android:hint="Enter Location" />
+
+            <TextView
+                android:id="@+id/jobTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobLocationLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="Type: " />
+
+            <EditText
+                android:id="@+id/jobTypeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobTypeLabel"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobDescriptionLabel"
+                android:ems="10"
+                android:hint="Enter Type" />
+
+            <TextView
+                android:id="@+id/jobPostDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobTypeLabel"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:text="Today's date: " />
+
+            <EditText
+                android:id="@+id/jobPostDateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/jobPostDateLabel"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/jobDescriptionLabel"
+                android:ems="10"
+                android:hint=" Select Post Date" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/jobPostDateText"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="75dp"
+                android:backgroundTint="#FCAF45"
+                android:gravity="center"
+                android:text="Post" />
+
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnSubmit"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="181dp"
+                android:layout_marginTop="-234dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
