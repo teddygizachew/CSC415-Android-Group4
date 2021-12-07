@@ -9,15 +9,28 @@
     android:backgroundTint="@color/Yellow"
     tools:context=".SignupActivity">
 
-    <TextView
+<!--    <TextView-->
+<!--        android:id="@+id/textViewBanner"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="79dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="CampUs"-->
+<!--        android:textSize="30sp" />-->
+
+    <ImageView
         android:id="@+id/textViewBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp"
-        android:gravity="center"
-        android:text="CampUs"
-        android:textSize="30sp" />
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_takeon_200_2" />
 
     <EditText
         android:id="@+id/editTextUsername"
@@ -26,9 +39,9 @@
         android:layout_below="@+id/textViewBanner"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-52dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/etshape"
         android:ems="10"
         android:hint="@string/username"
@@ -42,9 +55,9 @@
         android:layout_below="@+id/editTextUsername"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/etshape"
         android:ems="10"
         android:hint="@string/password"
@@ -59,12 +72,12 @@
         android:layout_below="@+id/editTextPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/etshape"
-        android:hint="@string/confirm_password"
         android:ems="10"
+        android:hint="@string/confirm_password"
         android:inputType="textPassword"
         android:padding="10dp"
         android:textColorHighlight="#1DA1F2" />
@@ -76,34 +89,38 @@
         android:layout_below="@+id/editTextConfirmPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="40dp"
         android:backgroundTint="#53D769"
         android:onClick="CreateUserAccount"
         android:text="@string/sign_up" />
 
-    <TextView
-        android:id="@+id/tvText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/buttonLogin"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/already_have_an_account" />
 
-    <TextView
-        android:id="@+id/tvSignin"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/buttonLogin"
-        android:layout_alignBottom="@+id/tvText"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="589dp"
-        android:layout_marginEnd="75dp"
-        android:layout_toEndOf="@+id/tvText"
-        android:text="@string/sign_in"
-        android:textColor="#147EFB" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account" />
+
+        <TextView
+            android:id="@+id/tvSignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/sign_in"
+            android:textColor="#147EFB" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

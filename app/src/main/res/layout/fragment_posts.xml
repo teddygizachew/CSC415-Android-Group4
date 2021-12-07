@@ -11,10 +11,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:id="@+id/headerRV"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/header_gradient">
+
+        </RelativeLayout>
+
         <TextView
             android:id="@+id/heading_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/headerRV"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
@@ -29,10 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/heading_label"
             android:layout_alignStart="@+id/heading_label"
-            android:layout_marginStart="-1dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="21dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="22dp"
             android:layout_marginBottom="15dp"
             android:layout_toStartOf="@+id/search_btn"
             android:background="@drawable/search_layout"
@@ -53,20 +60,20 @@
             android:layout_alignTop="@+id/search_field"
             android:layout_alignBottom="@+id/search_field"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
             android:background="@color/white"
             app:srcCompat="@mipmap/search_button" />
 
         <EditText
             android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/search_field"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/btnFilter"
             android:background="@drawable/etshape"
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="5dp"
@@ -75,6 +82,68 @@
             android:padding="10dp"
             android:textColorHighlight="#1DA1F2" />
 
+        <ImageView
+            android:id="@+id/btnFilter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/editTextUsername"
+            android:layout_alignBottom="@+id/editTextUsername"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/slider" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextUsername"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tag1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tag 1"
+                app:chipBackgroundColor="#FCAF45" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tag2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextUsername"
+                android:text="Tag 2"
+                app:chipBackgroundColor="#FCAF45" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tag3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextUsername"
+                android:text="Tag 3"
+                app:chipBackgroundColor="#FCAF45" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tag4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextUsername"
+                android:text="Tag 4"
+                app:chipBackgroundColor="#FCAF45" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tag5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextUsername"
+                android:text="Tag 5"
+                app:chipBackgroundColor="#FCAF45" />
+
+        </com.google.android.material.chip.ChipGroup>
 
 
     </RelativeLayout>
