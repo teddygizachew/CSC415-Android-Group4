@@ -33,5 +33,6 @@ public class JobActivity extends AppCompatActivity {
         jobLocation.setText(job.getJobLocation());
         jobType.setText(job.getJobType());
         jobPostDate.setText(job.getJobPostDate());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
