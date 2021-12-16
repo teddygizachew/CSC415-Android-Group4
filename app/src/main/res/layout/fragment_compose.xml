@@ -185,25 +185,7 @@
                 android:layout_marginTop="-234dp"
                 android:visibility="invisible" />
 
-            <TextView
-                android:id="@+id/dateTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/jobPostDateText"
-                android:layout_alignStart="@+id/button"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="24dp"
-                android:text="date"
-                android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnSubmit"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:text="Open Date" />
 
         </RelativeLayout>
     </ScrollView>

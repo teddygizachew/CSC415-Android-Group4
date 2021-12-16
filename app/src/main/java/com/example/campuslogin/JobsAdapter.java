@@ -67,6 +67,7 @@ public class JobsAdapter extends RecyclerView.Adapter<JobsAdapter.ViewHolder>{
         private TextView jobName, jobDescription, jobPayment, jobDueDate, jobLocation, jobType, jobPostDate;
         LinearLayout container;
 
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             jobName = itemView.findViewById(R.id.job_title);

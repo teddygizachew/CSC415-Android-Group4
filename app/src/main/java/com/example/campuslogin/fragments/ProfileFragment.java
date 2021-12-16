@@ -14,9 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.campuslogin.LoginActivity;
-import com.example.campuslogin.MainActivity;
 import com.example.campuslogin.R;
-import com.example.campuslogin.SettingsActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileFragment extends Fragment {
@@ -37,7 +35,38 @@ public class ProfileFragment extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
         return inflater.inflate(R.layout.fragment_profile, container, false);
 
+        //Switch buttonNotify = findViewById(R.id.notify);
+/*
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"TakeOn")
+                .setSmallIcon(R.drawable.ic_baseline_notifications_active_24)
+                .setContentTitle("TakeOn")
+                .setContentText("You can now get any notification from TakeOn")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .build();
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+
+        buttonNotify.setOnClickListener(view -> {
+            notificationManager.notify(100,builder.build());
+
+        });
+
+ */
     }
+    /*
+    private  void createNotificationChannel(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "studentChannel";
+            String description = "channel for student notification";
+            int importance = NotificationManagerCompat.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("TakeOn", name, importance);
+            channel.setDescription(description);
+
+            NotificationManager notficationManager = getSystemService(NotificationManager.class);
+            notficationManager.createNotificationChannel(channel);
+        }
+    }
+
+     */
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -47,7 +76,6 @@ public class ProfileFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
 
-        imageView = view.findViewById(R.id.setting);
 
 
 
@@ -62,15 +90,7 @@ public class ProfileFragment extends Fragment {
 
 
 
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent myintent = new Intent(ProfileFragment.this.getActivity(), SettingsActivity.class);
-                startActivity(myintent);
-            }
-        });
-
+        
     }
 
     //public void btnSettings_onClick(View view) {

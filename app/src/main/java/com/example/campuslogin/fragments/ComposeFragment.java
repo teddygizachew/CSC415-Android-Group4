@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.campuslogin.DAOJob;
 import com.example.campuslogin.Job;
+import com.example.campuslogin.MainActivity;
 import com.example.campuslogin.R;
 
 import java.text.DateFormat;
@@ -30,6 +32,11 @@ public class ComposeFragment extends Fragment {
 
     private EditText jobName, jobDescription, jobPayment, jobDueDate, jobLocation, jobType, jobPostDate;
     private Button btnPost;
+    private static final String TAG = "MainActivity";
+
+    private TextView mDisplayDate, forTodayDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private DatePickerDialog.OnDateSetListener mDateSetListeners;
 
     public ComposeFragment() {
         // Required empty public constructor
@@ -88,6 +95,8 @@ public class ComposeFragment extends Fragment {
                 Toast.makeText(getContext(), ""+err.getMessage(), Toast.LENGTH_SHORT).show();
             });
 
+
+
             // Update dao
 //            HashMap<String, Object> hashMap = new HashMap<>();
 //            hashMap.put("jobName", jobName.getText().toString());
@@ -109,5 +118,65 @@ public class ComposeFragment extends Fragment {
 //            });
 
         });
+        mDisplayDate = (TextView) view.findViewById(R.id.jobDueDateText);
+        forTodayDate = (TextView) view.findViewById(R.id.jobPostDateText);
+
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        getContext(),
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListener,
+                        year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        forTodayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        getContext(),
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListeners,
+                        year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
+
+                String date = month + "/" + day + "/" + year;
+                mDisplayDate.setText(date);
+            }
+        };
+        mDateSetListeners = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
+
+                String date = month + "/" + day + "/" + year;
+                forTodayDate.setText(date);
+            }
+        };
+
     }
 }
