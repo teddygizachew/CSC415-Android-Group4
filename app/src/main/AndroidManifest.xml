@@ -11,10 +11,13 @@
         android:theme="@style/Theme.CampusLogin">
         <activity
             android:name=".JobActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".SettingsActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+             />
         <activity
             android:name=".SignupActivity"
             android:exported="true" />

@@ -25,6 +25,9 @@
     <string name="twitterUsername">\@victor</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
+    <string name="emailName">vikingv1@nku.edu</string>
+
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
