@@ -44,6 +44,7 @@
 
                     </RelativeLayout>
 
+
                     <TextView
                         android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
@@ -69,16 +70,16 @@
                         android:textColor="@color/address"
                         android:textSize="14sp" />
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="15dp"
-                        android:adjustViewBounds="true"
-                        android:onClick="btnSettings_onClick"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/ic_settings" />
+                <ImageView
+                    android:id="@+id/setting"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings" />
 
                     <!--        <Button-->
                     <!--            android:layout_width="wrap_content"-->
@@ -118,7 +119,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-light"
-                                android:text="vikingv1@nku.edu"
+                                android:text="@string/emailName"
                                 android:textColor="#000000"
                                 android:textSize="18sp" />
 

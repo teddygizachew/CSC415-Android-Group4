@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.campuslogin.LoginActivity;
+import com.example.campuslogin.MainActivity;
 import com.example.campuslogin.R;
 import com.example.campuslogin.SettingsActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,6 +23,8 @@ public class ProfileFragment extends Fragment {
 
     FirebaseAuth mAuth;
     private Button btnLogout;
+    ImageView imageView;
+    String name;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -43,6 +47,10 @@ public class ProfileFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
 
+        imageView = view.findViewById(R.id.setting);
+
+
+
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,10 +59,23 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent myintent = new Intent(ProfileFragment.this.getActivity(), SettingsActivity.class);
+                startActivity(myintent);
+            }
+        });
+
     }
 
-    public void btnSettings_onClick(View view) {
-        Intent intent = new Intent(ProfileFragment.this.getActivity(), SettingsActivity.class);
-        startActivity(intent);
-    }
+    //public void btnSettings_onClick(View view) {
+    //    Intent intent = new Intent(ProfileFragment.this.getActivity(), SettingsActivity.class);
+    //    startActivity(intent);
+    //}
+
 }

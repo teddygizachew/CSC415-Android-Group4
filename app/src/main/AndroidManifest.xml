@@ -15,7 +15,9 @@
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".SettingsActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+             />
         <activity
             android:name=".SignupActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
