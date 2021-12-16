@@ -21,6 +21,7 @@
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/drawable/ic_settings.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/drawable/ic_takeon.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/drawable/ic_takeon_200_2.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/drawable/ic_user_background.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/drawable/ic_user_pic.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/drawable/ic_wave8.xml" value="0.24791666666666667" />
@@ -33,7 +34,7 @@
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.11510416666666666" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_compose.xml" value="0.21240942028985507" />
-        <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.20874398489836563" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_post.xml" value="0.5" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.11510416666666666" />
