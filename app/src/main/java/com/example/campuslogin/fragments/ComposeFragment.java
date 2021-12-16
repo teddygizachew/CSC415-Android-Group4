@@ -1,5 +1,8 @@
 package com.example.campuslogin.fragments;
 
+import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,15 +14,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.campuslogin.DAOJob;
 import com.example.campuslogin.Job;
 import com.example.campuslogin.R;
-import com.google.android.gms.tasks.OnSuccessListener;
 
-import java.util.HashMap;
+import java.text.DateFormat;
+import java.util.Calendar;
 
 public class ComposeFragment extends Fragment {
 

@@ -3,7 +3,6 @@ package com.example.campuslogin;
 import org.parceler.Parcel;
 
 @Parcel
-
 public class Job {
     private String jobName;
     private String jobDescription;

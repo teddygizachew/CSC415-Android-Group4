@@ -32,22 +32,24 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="9dp"
                 android:padding="4dp" >
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/photoPreviewLayout"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginStart="6dp"
                     android:src="@drawable/ic_photo"
-                    app:strokeWidth="0.5dp"
-                    app:strokeColor="#f1f1f1"
+                    app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
-                    app:cardCornerRadius="8dp">
+                    app:strokeColor="#f1f1f1"
+                    app:strokeWidth="0.5dp">
+
                     <ImageView
                         android:id="@+id/photoPreview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scaleType="centerInside"
                         android:layout_margin="5dp"
+                        android:scaleType="centerInside"
                         android:src="@drawable/ic_job_image" />
 
                 </com.google.android.material.card.MaterialCardView>
