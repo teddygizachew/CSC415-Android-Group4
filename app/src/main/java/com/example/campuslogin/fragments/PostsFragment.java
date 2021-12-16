@@ -27,6 +27,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.Query;
+
+import androidx.appcompat.widget.SearchView;
+import android.widget.AdapterView;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +48,7 @@ public class PostsFragment extends Fragment {
     DatabaseReference databaseReference;
     SwipeRefreshLayout swipeContainer;
     ArrayList<Job> list;
+    SearchView searchView;
 
 
     public PostsFragment() {
@@ -63,12 +73,13 @@ public class PostsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         swipeContainer = view.findViewById(R.id.swipeContainer);
+        searchView = view.findViewById(R.id.searchView);
         // Configure the refreshing colors
         swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
-        EditText etSearchField = view.findViewById(R.id.search_field);
+        //EditText etSearchField = view.findViewById(R.id.search_);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -95,7 +106,7 @@ public class PostsFragment extends Fragment {
         });
 
         rvJobs = view.findViewById(R.id.rvJobs);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Job");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Job");
         rvJobs.setHasFixedSize(true);
         rvJobs.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -158,6 +169,60 @@ public class PostsFragment extends Fragment {
 
             }
         });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        if (databaseReference != null) {
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    if(snapshot.exists()) {
+                        list = new ArrayList<>();
+                        for (DataSnapshot da:snapshot.getChildren()) {
+                            Job job = da.getValue((Job.class));
+                            list.add(job);
+                        }
+
+                        jobsAdapter = new JobsAdapter(getContext(), list);
+                        rvJobs.setAdapter(jobsAdapter);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        if (searchView != null) {
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    search(newText);
+                    return true;
+                }
+            });
+        }
+    }
+
+    private void search(String str) {
+        ArrayList<Job> myList = new ArrayList<>();
+        for (Job object : list) {
+            if (object.getJobDescription().toLowerCase().contains(str.toLowerCase())) {
+                myList.add(object);
+            }
+        }
+        jobsAdapter = new JobsAdapter(getContext(), myList);
+        rvJobs.setAdapter(jobsAdapter);
     }
 
 }
