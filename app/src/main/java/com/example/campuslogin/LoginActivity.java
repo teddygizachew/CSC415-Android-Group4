@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etEmail, etPassword;
     private Button btnLogin;
     ProgressDialog progressDialog;
+    private EditText setEmail;
 
     // Firebase variables
     FirebaseAuth mAuth;
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.editTextUsername);
         etPassword = findViewById(R.id.editTextPassword);
         btnLogin = findViewById(R.id.buttonLogin);
+
         progressDialog = new ProgressDialog(this);
 
         // initialize Firebase variables
