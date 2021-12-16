@@ -12,8 +12,12 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.campuslogin.Job;
 import com.example.campuslogin.JobsAdapter;
@@ -36,6 +40,7 @@ public class PostsFragment extends Fragment {
     SwipeRefreshLayout swipeContainer;
     ArrayList<Job> list;
 
+
     public PostsFragment() {
         // Required empty public constructor
     }
@@ -43,10 +48,15 @@ public class PostsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
         ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
         return inflater.inflate(R.layout.fragment_posts, container, false);
     }
+
+
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -58,6 +68,7 @@ public class PostsFragment extends Fragment {
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
+        EditText etSearchField = view.findViewById(R.id.search_field);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -109,7 +120,11 @@ public class PostsFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+
         });
+
+
+
 
 //        // Steps to use the recycler view:
 //        // 0. Create layout for one row in the list
