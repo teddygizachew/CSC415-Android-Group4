@@ -18,11 +18,11 @@ public class JobActivity extends AppCompatActivity {
 
         jobName = findViewById(R.id.job_title);
         jobDescription = findViewById(R.id.job_description);
-        jobPayment = findViewById(R.id.job_location);
-        jobDueDate = findViewById(R.id.job_type);
-        jobLocation = findViewById(R.id.job_post_date);
-        jobType = findViewById(R.id.job_info);
-        jobPostDate = findViewById(R.id.job_info);
+        jobPayment = findViewById(R.id.job_pay);
+        jobDueDate = findViewById(R.id.job_due_date);
+        jobLocation = findViewById(R.id.job_location);
+        jobType = findViewById(R.id.job_type);
+        jobPostDate = findViewById(R.id.job_post_date);
 
         Job job = (Job) Parcels.unwrap(getIntent().getParcelableExtra("job"));
 

@@ -40,7 +40,9 @@
             android:layout_alignStart="@+id/heading_label"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="0dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="20dp"
+            android:background="@color/gray_050"
             app:queryHint="Search" />
 
     </RelativeLayout>
@@ -50,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/headerContent"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="2dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvJobs"

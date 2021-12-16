@@ -30,8 +30,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circle_border">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/profile_image"
                         android:layout_width="96dp"
                         android:layout_height="96dp"
@@ -301,7 +300,7 @@
                             <TextView
                                 android:id="@+id/email"
                                 android:layout_width="match_parent"
-                                android:text="takeon.nku.edu"
+                                android:text="customerservice@takeon.com"
                                 android:padding="10dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_height="wrap_content"

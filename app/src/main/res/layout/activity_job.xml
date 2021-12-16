@@ -2,44 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="6dp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="0dp"
-        app:strokeColor="#f1f1f1"
-        app:strokeWidth="1dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-
-        <LinearLayout
-            android:id="@+id/container"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:orientation="vertical">
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#f1f1f1"
+            app:strokeWidth="1dp">
 
             <LinearLayout
+                android:id="@+id/container"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <RelativeLayout
-                    android:id="@+id/qwerer"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="9dp"
-                    android:layout_weight="1"
-                    android:padding="4dp">
+                    android:padding="4dp" >
 
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/photoPreviewLayout"
@@ -59,67 +56,61 @@
                             android:layout_margin="5dp"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_job_image" />
+
                     </com.google.android.material.card.MaterialCardView>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="2dp"
                         android:layout_toEndOf="@id/photoPreviewLayout"
-                        android:orientation="vertical">
-
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
                         <TextView
                             android:id="@+id/job_title"
+                            android:ellipsize="end"
+                            android:maxLines="2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginBottom="3dp"
-                            android:ellipsize="end"
-                            android:fontFamily="@font/bold"
-                            android:maxLines="2"
                             android:text="@string/student_union_food_delivery"
                             android:textColor="@color/gray_500"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="@font/bold"/>
+                        <!--                    <RelativeLayout-->
+                        <!--                        android:layout_marginStart="14dp"-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content">-->
 
+                        <!--                        <ImageView-->
+                        <!--                            android:id="@+id/lampIcon"-->
+                        <!--                            android:layout_width="15dp"-->
+                        <!--                            android:layout_height="16sp"-->
+                        <!--                            android:layout_marginEnd="5dp"-->
+                        <!--                            android:src="@drawable/ic_round_business_24"-->
+                        <!--                            app:tint="@color/gray_300" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:id="@+id/job_info"-->
+                        <!--                            android:layout_toEndOf="@id/lampIcon"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:textColor="@color/gray_400"-->
+                        <!--                            android:textSize="12sp"-->
+                        <!--                            android:singleLine="true"-->
+                        <!--                            android:ellipsize="end"-->
+                        <!--                            android:fontFamily="@font/book"/>-->
+                        <!--                    </RelativeLayout>-->
                         <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="14dp">
-
-                            <ImageView
-                                android:id="@+id/lampIcon"
-                                android:layout_width="15dp"
-                                android:layout_height="16sp"
-                                android:layout_marginEnd="5dp"
-                                android:src="@drawable/ic_round_business_24"
-                                app:tint="@color/gray_300" />
-
-                            <TextView
-                                android:id="@+id/job_description"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/lampIcon"
-                                android:ellipsize="end"
-                                android:fontFamily="@font/book"
-                                android:singleLine="true"
-                                android:textColor="@color/gray_400"
-                                android:textSize="12sp" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/relativeLayoutLocation"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:layout_marginStart="14dp"
-                            android:layout_marginTop="3dp">
-
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
                             <ImageView
                                 android:id="@+id/locIcon"
-                                android:layout_width="15dp"
-                                android:layout_height="16sp"
-                                android:layout_marginEnd="5dp"
                                 android:src="@drawable/ic_outline_location_on_24"
-                                app:tint="@color/gray_300" />
+                                app:tint="@color/gray_300"
+                                android:layout_marginEnd="5dp"
+                                android:layout_width="15dp"
+                                android:layout_height="16sp"/>
 
                             <TextView
                                 android:id="@+id/job_location"
@@ -132,50 +123,95 @@
                                 android:textColor="@color/gray_400"
                                 android:textSize="12sp" />
                         </RelativeLayout>
-
-                        <ScrollView
-                            android:layout_width="wrap_content"
-                            android:layout_height="0dp"
-                            android:layout_weight="1">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="14dp"
-                                android:layout_marginTop="3dp"
-                                android:paddingTop="10dp"
-                                android:paddingBottom="10dp">
-
-                                <TextView
-                                    android:id="@+id/payIcon"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="5dp"
-                                    android:ellipsize="end"
-                                    android:fontFamily="@font/book"
-                                    android:singleLine="true"
-                                    android:text="@string/description"
-                                    android:textColor="@color/gray_400"
-                                    android:textSize="12sp" />
-
-                                <TextView
-                                    android:id="@+id/job_info"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_toEndOf="@id/payIcon"
-                                    android:ellipsize="end"
-                                    android:fontFamily="@font/book"
-                                    android:textColor="@color/gray_400"
-                                    android:textSize="12sp" />
-                            </RelativeLayout>
-
-                        </ScrollView>
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="14dp"
                             android:layout_marginTop="3dp">
+
+                            <TextView
+                                android:id="@+id/descIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/book"
+                                android:singleLine="true"
+                                android:text="@string/description"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/job_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/descIcon"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/book"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="3dp">
+
+                            <TextView
+                                android:id="@+id/payIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/book"
+                                android:singleLine="true"
+                                android:text="Payment"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/job_pay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/payIcon"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/book"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="3dp">
+
+                            <TextView
+                                android:id="@+id/dueIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/book"
+                                android:singleLine="true"
+                                android:text="Due Date"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/job_due_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/dueIcon"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/book"
+                                android:textColor="@color/gray_400"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <TextView
                                 android:id="@+id/job_type"
@@ -190,49 +226,46 @@
                                 android:paddingBottom="2dp"
                                 android:textColor="@color/blue_500"
                                 android:textSize="10sp" />
-
                             <TextView
                                 android:id="@+id/job_post_date"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="6dp"
-                                android:fontFamily="@font/book"
                                 android:paddingStart="6dp"
-                                android:paddingTop="2dp"
                                 android:paddingEnd="6dp"
+                                android:paddingTop="2dp"
                                 android:paddingBottom="2dp"
+                                android:layout_alignParentEnd="true"
                                 android:textColor="@color/gray_300"
-                                android:textSize="11sp" />
+                                android:textSize="11sp"
+                                android:fontFamily="@font/book"/>
                         </RelativeLayout>
-
                     </LinearLayout>
-
                 </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Apply" />
-                </LinearLayout>
             </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="#FCAF45"
+                android:text="Take on" />
         </LinearLayout>
+    </LinearLayout>
 
 
-    </com.google.android.material.card.MaterialCardView>
 
 
 </LinearLayout>
-
-
 
 
 
