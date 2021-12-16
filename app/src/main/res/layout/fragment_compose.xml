@@ -12,14 +12,14 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/jobNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:text="Name:" />
 
@@ -42,7 +42,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jobNameLabel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="45dp"
                 android:text="Description: " />
 
@@ -63,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jobDescriptionLabel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="45dp"
                 android:text="Payment: " />
 
@@ -84,7 +82,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jobPaymentLabel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="45dp"
                 android:text="Due Date: " />
 
@@ -105,7 +102,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jobDueDateLabel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="45dp"
                 android:text="Location: " />
 
@@ -126,7 +122,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jobLocationLabel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="45dp"
                 android:text="Type: " />
 
@@ -147,7 +142,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jobTypeLabel"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="45dp"
                 android:text="Today's date: " />
 
