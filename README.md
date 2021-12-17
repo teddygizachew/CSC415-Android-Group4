@@ -1,6 +1,6 @@
 # *TAKE ON*
 
-**TAKE ON** is a job finder app inteded for college students.
+**TAKE ON** is a job finder app intended for college students.
 
 ## Video Walkthrough
 
